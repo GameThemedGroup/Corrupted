@@ -5,9 +5,9 @@
 
 # We use an underscore to hide the "GameWindow" when this module is imported.
 from Engine import GameWindow as _GameWindow
-from Corrupted_FunctionalAPI import *
+from Corrupted_ProceduralAPI import *
 
-class CustomCorruptedMaker(CorruptedFunctionalAPI):
+class CustomCorruptedMaker(CorruptedProceduralAPI):
     
     """local variables used to store references to student written methods."""
     doBuildGame = None
