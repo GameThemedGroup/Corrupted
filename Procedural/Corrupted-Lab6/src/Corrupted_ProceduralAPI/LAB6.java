@@ -3,88 +3,107 @@ package Corrupted_ProceduralAPI;
 import Corrupted_ProceduralAPI.CorruptedProceduralAPI;
 
 /**
- * LAB 6: Lasers and Matching Tiles
+ * LAB 6: For Loops Lab: Drawing Columns
+ * 
+ * Extension for those who finish early: 
+ * After drawing the board, students could add the laser in to play with it.
+ * OR, they could try to make the for loop count down instead of up.
  * 
  * @author Rachel Horton
  */
 public class LAB6 extends CorruptedProceduralAPI
 {
-    int matches = 0;
-    
     public void buildGame()
     {
-        drawLaser();
+        for(int currentNum = 1; currentNum <= 10; currentNum = currentNum + 1)
+        {
+            drawTile(9, currentNum, "blue");
+        }
         
-        // How many tiles need to be matched before they will delete?
-        setTilesInMatchSet(3);
+        for(int currentNum = 1; currentNum <= 10; currentNum = currentNum + 1)
+        {
+            drawTile(10, currentNum, "red");
+        }
         
-        //Build a board!  At least one column
-        drawTile(7, 0, "light blue");
-        drawTile(7, 1, "red");
-        drawTile(7, 2, "green");
-        drawTile(7, 3, "yellow");
-        drawTile(7, 4, "blue");
-        drawTile(7, 5, "light blue");
-        drawTile(7, 6, "green");
-        drawTile(7, 7, "purble");
-        drawTile(7, 8, "blue");
-        drawTile(7, 9, "red");
+        for(int currentNum = 1; currentNum <= 10; currentNum = currentNum + 1)
+        {
+            drawTile(11, currentNum, "light blue");
+        }
         
-        drawTile(8, 0, "green");
-        drawTile(8, 1, "red");
-        drawTile(8, 2, "green");
-        drawTile(8, 3, "blue");
-        drawTile(8, 4, "yellow");
-        drawTile(8, 5, "blue");
-        drawTile(8, 6, "purple");
-        drawTile(8, 7, "red");
-        drawTile(8, 8, "green");
-        drawTile(8, 9, "blue");
+        for(int currentNum = 1; currentNum <= 10; currentNum = currentNum + 1)
+        {
+            drawTile(12, currentNum, "green");
+        }
         
-        drawTile(9, 0, "blue");
-        drawTile(9, 1, "green");
-        drawTile(9, 2, "red");
-        drawTile(9, 3, "light blue");
-        drawTile(9, 4, "green");
-        drawTile(9, 5, "yellow");
-        drawTile(9, 6, "purple");
-        drawTile(9, 7, "light blue");
-        drawTile(9, 8, "light blue");
-        drawTile(9, 9, "green");
+        for(int currentNum = 1; currentNum <= 10; currentNum = currentNum + 1)
+        {
+            drawTile(13, currentNum, "purple");
+        }
         
-        drawTile(10, 0, "red");
-        drawTile(10, 1, "blue");
-        drawTile(10, 2, "red");
-        drawTile(10, 3, "light blue");
-        drawTile(10, 4, "yellow");
-        drawTile(10, 5, "blue");
-        drawTile(10, 6, "green");
-        drawTile(10, 7, "yellow");
-        drawTile(10, 8, "red");
-        drawTile(10, 9, "blue");
+        for(int currentNum = 1; currentNum <= 10; currentNum = currentNum + 1)
+        {
+            drawTile(14, currentNum, "yellow");
+        }
+        
+        for(int currentNum = 1; currentNum <= 10; currentNum = currentNum + 1)
+        {
+            drawTile(15, currentNum, "red");
+        }
+        
+        for(int currentNum = 1; currentNum <= 10; currentNum = currentNum + 1)
+        {
+            drawTile(16, currentNum, "blue");
+        }
+        
+        for(int currentNum = 1; currentNum <= 10; currentNum = currentNum + 1)
+        {
+            drawTile(17, currentNum, "yellow");
+        }
+        
+        for(int currentNum = 1; currentNum <= 10; currentNum = currentNum + 1)
+        {
+            drawTile(18, currentNum, "green");
+        }
+        
+        for(int currentNum = 1; currentNum <= 10; currentNum = currentNum + 1)
+        {
+            drawTile(19, currentNum, "light blue");
+        }
+        
+        for(int currentNum = 1; currentNum <= 10; currentNum = currentNum + 1)
+        {
+            drawTile(20, currentNum, "purple");
+        }
+      
+        for(int currentNum = 1; currentNum <= 10; currentNum = currentNum + 1)
+        {
+            drawTile(21, currentNum, "green");
+        }
+        
+        for(int currentNum = 1; currentNum <= 10; currentNum = currentNum + 1)
+        {
+            drawTile(22, currentNum, "yellow");
+        }
+        
+        for(int currentNum = 1; currentNum <= 10; currentNum = currentNum + 1)
+        {
+            drawTile(23, currentNum, "red");
+        }
+        
+        for(int currentNum = 1; currentNum <= 10; currentNum = currentNum + 1)
+        {
+            drawTile(24, currentNum, "blue");
+        }
+        
+        for(int currentNum = 1; currentNum <= 10; currentNum = currentNum + 1)
+        {
+            drawTile(25, currentNum, "yellow");
+        }
+        
     }
     
     public void updateGame()
     {
-        //Handle player input
-        if(pressingUp())
-        {
-            moveLaserUp();
-        }
-        else if(pressingDown())
-        {
-            moveLaserDown();
-        }
-        else if(pressingRight())
-        {
-            drawNewTileFromLaser();
-            matches = getNumberOfMatchingTiles();
-            if (matches >= tilesInMatchSet)
-            {
-                deleteMatchingTiles();
-            }
-            setNewLaserColor();
-        }
-
+        
     }
 }
