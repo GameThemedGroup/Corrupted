@@ -38,7 +38,7 @@ public class CorruptedProceduralAPI extends Game
     TileLogic tileHelper = new TileLogic(this);
     
     //Contains all the colors available for tiles
-    String[] colors = new String[6];
+    String[] colors = new String[7];
     
     IntVector newTilePosition;
     private RowMeter counter;
@@ -371,6 +371,7 @@ public class CorruptedProceduralAPI extends Game
         colors[3] = "yellow";
         colors[4] = "red";
         colors[5] = "green";
+        colors[6] = "cyan";
     }
 
      /**
@@ -415,13 +416,12 @@ public class CorruptedProceduralAPI extends Game
         {
             return GridElement.ColorEnum.YELLOW;   
         }
-        
         else if(color.equalsIgnoreCase("purple"))
         {
             return GridElement.ColorEnum.MAGENTA;
         }
         //default color
-        else 
+        else
         {
             return GridElement.ColorEnum.CYAN;   
         }
