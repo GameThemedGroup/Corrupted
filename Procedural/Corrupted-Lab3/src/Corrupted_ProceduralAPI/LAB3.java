@@ -10,12 +10,12 @@ import Corrupted_ProceduralAPI.CorruptedProceduralAPI;
 public class LAB3 extends CorruptedProceduralAPI
 {
     
-   public void buildWorld()
+   public void buildGame()
    {
        
    }
    
-   public void updateWorld()
+   public void updateGame()
    {
        if(pressingRight())
        {
