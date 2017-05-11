@@ -726,5 +726,25 @@ public class CorruptedProceduralAPI extends Game
         return location;   
 
     }
+
+    /**
+     * Deletes all GridElements
+     */
+    public void clear() {
+        tileHelper.clear();
+    }
+
+    /**
+     * Check if a tile is occupied.
+     *
+     * @param x : the x position
+     * @param y : the y position
+     *
+     * @return whether the position is occupied
+     */
+    public boolean isOccupied(int x, int y) {
+
+        return tileHelper.getElement(x, y) != null;
+    }
     
 }
