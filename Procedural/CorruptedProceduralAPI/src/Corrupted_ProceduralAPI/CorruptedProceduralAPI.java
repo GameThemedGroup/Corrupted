@@ -748,5 +748,17 @@ public class CorruptedProceduralAPI extends Game
 
         return tileHelper.getElement(x, y) != null;
     }
-    
+
+
+    /**
+     * Play a sound.
+     *
+     * The file should be located in the resources folder
+     * in the project root.
+     *
+     * @param file : sound file, must include the extention.
+     */
+    public void playACue(String file) {
+        resources.playSound(file);
+    }
 }

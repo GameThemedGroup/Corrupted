@@ -83,40 +83,4 @@ public class MethodsToOverride extends CorruptedProceduralAPI
         return matchedTiles.size();
     }
 
-    /**
-     * Deletes all GridElements
-     *
-     * @author Lei Sun
-     */
-    public void clearScreen() {
-        GridElement[][] grid = getTheGrid();
-        try {
-            for (int x = 0; x < mGM.getWidth(); x++) {
-                for (int y = 0; y < mGM.getHeight(); y++) {
-                    grid[x][y] = null;
-                }
-            }
-        } catch (ArrayIndexOutOfBoundsException e) {
-            ErrorHandler.printErrorAndQuit(ErrorHandler.OUT_OF_BOUNDS);
-        }
-    }
-
-    /**
-     * Check if a tile is occupied.
-     *
-     * @param x : the x position
-     * @param y : the y position
-     *
-     * @author Lei Sun
-     */
-    public void isOccupied(int x, int y) {
-        GridElement[][] grid = getTheGrid();
-        try {
-
-            return grid[x][y] != null;
-
-        } catch (ArrayIndexOutOfBoundsException e) {
-            ErrorHandler.printErrorAndQuit(ErrorHandler.OUT_OF_BOUNDS);
-        }
-    }
 }
