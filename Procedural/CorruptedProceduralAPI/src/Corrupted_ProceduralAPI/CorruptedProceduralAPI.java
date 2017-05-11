@@ -731,7 +731,9 @@ public class CorruptedProceduralAPI extends Game
      * Deletes all GridElements
      */
     public void clear() {
+
         tileHelper.clear();
+
     }
 
     /**
