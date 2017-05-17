@@ -678,10 +678,7 @@ public class CorruptedProceduralAPI extends Game {
      * Deletes all GridElements and reset the counter
      */
     public void clear() {
-
-        tileHelper.clear();
-        counter.reset();
-
+    	clear(true, true, false);
     }
 
     /**
@@ -692,15 +689,13 @@ public class CorruptedProceduralAPI extends Game {
      */
     public void clear(boolean clearGrid, boolean clearCounter, boolean clearLaser) {
         if (clearGrid)
-            tileHelper.clear();
+            clearGrid();
         if (clearCounter)
-            counter.reset();
+            setCounterValue(0);
         if (clearLaser) {
             shouldDrawLaser = false;
             this.setPlayerVisibility(false);
         }
-
-
     }
 
 
@@ -708,9 +703,7 @@ public class CorruptedProceduralAPI extends Game {
      * Deletes all GridElements
      */
     public void clearGrid() {
-
         tileHelper.clear();
-
     }
 
     /**
